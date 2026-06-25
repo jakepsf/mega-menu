@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Your requested background #F7F6F2 */
+    --background: 48 20% 96%; 
+    --foreground: 0 0% 15%; /* Darker for better contrast */
+
+    /* UPDATED: Primary set to Logo Dark Grey (#4A4A4A) */
+    --primary: 0 0% 29%; 
+    --primary-foreground: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 29%;
+    
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 29%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    
+    /* Keeping your accent teal or you can change to the logo orange */
+    --accent: 32 95% 69%; /* Logo Orange: #FBB062 */
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 29%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Adjusting dark mode to be a very deep charcoal instead of blue */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --primary: 0 0% 90%; /* Light grey in dark mode */
+    --primary-foreground: 0 0% 10%;
+    --border: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
